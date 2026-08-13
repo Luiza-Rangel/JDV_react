@@ -1,0 +1,177 @@
+/* Fonte e configurações gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Container principal */
+.game {
+  display: flex;
+  gap: 40px;
+
+  padding: 35px;
+  border-radius: 25px;
+
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Parte do tabuleiro */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Status: jogador atual ou vencedor */
+.status {
+  margin-bottom: 20px;
+
+  padding: 12px 25px;
+  border-radius: 12px;
+
+  background-color: white;
+  color: #5b3f9b;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Linha do tabuleiro */
+.board-row {
+  display: flex;
+}
+
+/* Quadrados */
+.square {
+  width: 100px;
+  height: 100px;
+
+  margin: 4px;
+
+  border: none;
+  border-radius: 15px;
+
+  background-color: white;
+  color: #5b3f9b;
+
+  font-size: 42px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+  transition: 
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.square:hover {
+  transform: translateY(-5px) scale(1.03);
+
+  background-color: #f3edff;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ao clicar */
+.square:active {
+  transform: scale(0.95);
+}
+
+/* Histórico de jogadas */
+.game-info {
+  min-width: 200px;
+
+  padding: 20px;
+  border-radius: 18px;
+
+  background-color: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Lista */
+.game-info ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Espaçamento entre os botões */
+.game-info li {
+  margin-bottom: 10px;
+}
+
+/* Botões do histórico */
+.game-info button {
+  width: 100%;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #667eea;
+  color: white;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+/* Hover dos botões do histórico */
+.game-info button:hover {
+  background-color: #5a67d8;
+  transform: translateX(3px);
+}
+
+/* Responsividade para celular */
+@media (max-width: 700px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .game {
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 25px;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+
+    font-size: 35px;
+  }
+
+  .game-info {
+    width: 100%;
+  }
+}
