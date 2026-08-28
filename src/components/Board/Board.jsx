@@ -24,7 +24,6 @@ function calculateWinner(squares) {
 
 
 
-
 export default function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
