@@ -1,5 +1,5 @@
 // Importa o componente Square
-import Square from './components/Square/Square'
+import Game from "./components/Game/Game"
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
       <h1>Jogo da Velha</h1>
 
-    <Square />
+    <Game />
 
     </div>
   )
