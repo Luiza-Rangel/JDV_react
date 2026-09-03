@@ -63,3 +63,41 @@
   
     box-shadow: 0 8px 20px rgba(120, 90, 140, 0.18);
   }
+
+  /* Cores das casas */
+
+.square:nth-child(1) {
+    background-color: #f4f0fd;
+  }
+  
+  .square:nth-child(2) {
+    background-color: #fccdb7;
+  }
+  
+  .square:nth-child(3) {
+    background-color: #f8b9bc;
+  }
+  
+  .square:nth-child(4) {
+    background-color: #edaaca;
+  }
+  
+  .square:nth-child(5) {
+    background-color: #c8b8db;
+  }
+  
+  .square:nth-child(6) {
+    background-color: #a7c6e9;
+  }
+  
+  .square:nth-child(7) {
+    background-color: #f8b9bc;
+  }
+  
+  .square:nth-child(8) {
+    background-color: #edaaca;
+  }
+  
+  .square:nth-child(9) {
+    background-color: #c8b8db;
+  }
