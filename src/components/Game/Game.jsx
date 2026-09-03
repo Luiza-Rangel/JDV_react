@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Board from "../Board/Board";
+import styles from "./Game.module.css";
 
 export default function Game() {
 
@@ -58,30 +59,30 @@ export default function Game() {
   });
 
   return (
-    <div className="game">
-
-      <div className="game-board">
-
+    <div className={styles.game}>
+  
+      <div className={styles.gameBoard}>
+  
         <Board
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
         />
-
+  
       </div>
-
-      <div className="game-info">
-
+  
+      <div className={styles.gameInfo}>
+  
         <button onClick={resetGame}>
           Reiniciar
         </button>
-
+  
         <ol>
           {moves}
         </ol>
-
+  
       </div>
-
+  
     </div>
   );
 }

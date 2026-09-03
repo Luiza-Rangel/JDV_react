@@ -18,7 +18,7 @@
   
     padding: 20px;
   
-    background-color: rgba(255, 255, 255, 0.65);
+    background-color: rgba(189, 198, 228, 0.65);
   
     border-radius: 20px;
   
@@ -46,7 +46,7 @@
   }
   
   .gameInfo button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px); 
   
     background-color: #edaaca;
   }

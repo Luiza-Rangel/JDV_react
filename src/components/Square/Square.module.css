@@ -50,7 +50,7 @@
     /* Mostra a mãozinha ao passar o mouse */
     cursor: pointer;
   
-    /* Faz as mudanças ficarem suaves */
+    /* Faz as mudanças ficarem bem mais suaves */
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
@@ -67,7 +67,7 @@
   /* Cores das casas */
 
 .square:nth-child(1) {
-    background-color: #f4f0fd;
+    background-color: #c5b5ec;
   }
   
   .square:nth-child(2) {
