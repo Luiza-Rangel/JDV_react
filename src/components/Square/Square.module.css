@@ -1,0 +1,65 @@
+.square {
+    /* Tamanho de cada casa do jogo */
+    width: 120px;
+    height: 120px;
+  
+    /* Borda branca */
+    border: 3px solid white;
+  
+    /* Deixa os cantos arredondados */
+    border-radius: 18px;
+  
+    /* Cor inicial da casa */
+    background-color: #f4f0fd;
+  
+    /* Tamanho do X e O */
+    font-size: 3.5rem;
+  
+    /* Deixa X e O mais destacados */
+    font-weight: bold;
+    .square {
+        width: 120px;
+        height: 120px;
+      
+        border: 3px solid white;
+        border-radius: 18px;
+      
+        background-color: #f4f0fd;
+      
+        font-size: 3.5rem;
+        font-weight: bold;
+      
+        color: #8f78a8;
+      
+        cursor: pointer;
+      
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease,
+          background-color 0.2s ease;
+      }
+      
+      .square:hover {
+        transform: scale(1.05);
+      
+        box-shadow: 0 8px 20px rgba(120, 90, 140, 0.15);
+      }
+    /* Cor do X e O */
+    color: #765d87;
+  
+    /* Mostra a mãozinha ao passar o mouse */
+    cursor: pointer;
+  
+    /* Faz as mudanças ficarem suaves */
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  
+  /* Efeito quando passamos o mouse */
+  .square:hover {
+    transform: scale(1.05);
+  
+    box-shadow: 0 8px 20px rgba(120, 90, 140, 0.18);
+  }
