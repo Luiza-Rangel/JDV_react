@@ -1,70 +1,36 @@
-/* Faz o tamanho dos elementos ser calculado de forma mais fácil */
 * {
-    box-sizing: border-box;
-  }
-  
-  
-  /* Configura a página inteira */
-  body {
-    margin: 0;
-  
-    min-height: 100vh;
-  
-    /* Fonte */
-    font-family: Arial, sans-serif;
-  
-    /* Fundo lavanda bem clarinho */
-    background-color: #F5F8FD;
-  
-    /* Cor padrão dos textos */
-    color: #9d79b4;
-  }
-  
-  
-  /* Faz os botões usarem a mesma fonte de  todos */
-  button {
-    font-family: inherit;
-  }
-  
-  
-  /* Área principal do React */
-  #root {
-    min-height: 100vh;
-  
-    /* Centraliza o jogo na tela */
-    display: flex;
-  
-    align-items: center;
-  
-    justify-content: center;
-  }
-  
-  
-  /* Texto:
-     Next player: X
-     ou
-     Winner: X
-  */
-  .status {
-    margin-bottom: 20px;
-  
-    text-align: center;
-  
-    font-size: 1.4rem;
-  
-    font-weight: bold;
-  
-    color: #765d87;
-  }
-  
-  
-  /* Cada linha possui 3 quadradinhos */
-  .board-row {
-    display: flex;
-  
-    /* Espaço entre as casas */
-    gap: 10px;
-  
-    /* Espaço entre as linhas */
-    margin-bottom: 10px;
-  }
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f0fd, #edaaca, #a7c6e9);
+  color: #765d87;
+}
+
+button, input {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #765d87;
+}
+
+.board-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}

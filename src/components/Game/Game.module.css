@@ -1,140 +1,157 @@
+/* Card da Tela de Perguntas Inicial */
+.setupCard {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(120, 90, 140, 0.12);
+  text-align: center;
+}
+
+.setupCard h2 {
+  color: #765d87;
+  margin-bottom: 8px;
+}
+
+.setupCard p {
+  color: #765d87;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.inputGroup label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #765d87;
+}
+
+.inputGroup input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #c8b8db;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.startBtn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: #edaaca;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.startBtn:hover {
+  background-color: #e096ba;
+  transform: translateY(-2px);
+}
+
+/* Layout Principal do Jogo */
 .game {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px;
-  }
-  
-  .gameBoard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .gameInfo {
-    min-width: 240px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(120, 90, 140, 0.12);
-  }
-  
-  .gameInfo h3 {
-    margin: 15px 0 10px 0;
-    font-size: 1rem;
-    color: #765d87;
-    text-align: center;
-  }
-  
-  /* 🏆 ESTILOS DO PLACAR */
-  .scoreboard {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #f4f0fd;
-    border-radius: 16px;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 2px solid #c8b8db;
-  }
-  
-  .scoreBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .playerLabel {
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #765d87;
-    letter-spacing: 0.5px;
-  }
-  
-  .scoreValue {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #765d87;
-  }
-  
-  .scoreDivider {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #edaaca;
-  }
-  
-  /* 🔘 ÁREA DOS BOTÕES DE AÇÃO */
-  .actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  /* Botão Próxima Partida (Destaque em Rosa) */
-  .nextGameBtn {
-    width: 100%;
-    padding: 12px 18px;
-    border: none;
-    border-radius: 12px;
-    background-color: #edaaca;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(237, 170, 202, 0.3);
-  }
-  
-  .nextGameBtn:hover {
-    transform: translateY(-2px);
-    background-color: #e293b9;
-    box-shadow: 0 6px 16px rgba(237, 170, 202, 0.4);
-  }
-  
-  /* Botão Zerar Placar (Lilás secundário) */
-  .resetBtn {
-    width: 100%;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 12px;
-    background-color: #c8b8db;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .resetBtn:hover {
-    transform: translateY(-2px);
-    background-color: #b5a1ca;
-  }
-  
-  /* Botões da Lista de Histórico */
-  .historyBtn {
-    width: 100%;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #f4f0fd;
-    color: #765d87;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
-  
-  .historyBtn:hover {
-    background-color: #c8b8db;
-    color: white;
-  }
-  
-  .gameInfo ol {
-    padding-left: 20px;
-    margin: 0;
-  }
-  
-  .gameInfo li {
-    margin: 6px 0;
-  }
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px;
+}
+
+.gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameInfo {
+  min-width: 230px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(120, 90, 140, 0.12);
+}
+
+/* Placar */
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.scoreBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreBox span {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #765d87;
+}
+
+.scoreBox strong {
+  font-size: 1.4rem;
+  color: #765d87;
+}
+
+.divider {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c8b8db;
+}
+
+/* Botões do painel lateral */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.gameInfo button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background-color: #c8b8db;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.gameInfo button:hover {
+  transform: translateY(-2px);
+  background-color: #edaaca;
+}
+
+.gameInfo ol {
+  padding-left: 20px;
+}
+
+.gameInfo li {
+  margin: 8px 0;
+}

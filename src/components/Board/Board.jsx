@@ -1,57 +1,50 @@
 import Square from "../Square/Square";
 
+// Função para calcular se houve vencedor
 function calculateWinner(squares) {
   const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6]
   ];
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (
-      squares[a] &&
-      squares[a] === squares[b] &&
-      squares[a] === squares[c]
-    ) {
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
   }
   return null;
 }
 
-export default function Board({ xIsNext, squares, onPlay }) {
+export default function Board({ xIsNext, squares, onPlay, playerX, playerO }) {
   function handleClick(i) {
+    // Não deixa clicar se já houver vencedor ou se a casa estiver ocupada
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
 
+    // Copia o array de casas e adiciona a jogada
     const nextSquares = squares.slice();
-    if (xIsNext) {
-      nextSquares[i] = "X";
-    } else {
-      nextSquares[i] = "O";
-    }
+    nextSquares[i] = xIsNext ? "X" : "O";
 
+    // Envia a jogada para o componente principal
     onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
-  // Verifica se todas as casas foram preenchidas sem vencedor
   const isDraw = !winner && squares.every((square) => square !== null);
 
+  // Mensagem informando quem joga ou quem venceu
   let status;
   if (winner) {
-    status = "🎉 Vencedor: " + winner;
+    const winnerName = winner === "X" ? playerX : playerO;
+    status = "🎉 Vencedor: " + winnerName;
   } else if (isDraw) {
     status = "🤝 Empate!";
   } else {
-    status = "Vez do jogador: " + (xIsNext ? "X" : "O");
+    const currentPlayer = xIsNext ? playerX : playerO;
+    status = "Vez de: " + currentPlayer + " (" + (xIsNext ? "X" : "O") + ")";
   }
 
   return (
